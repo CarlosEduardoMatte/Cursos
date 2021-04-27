@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+	<title>Teste de lente</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="https://useiconic.com/open-iconic/svg/list.svg">
+	
+
+	<!-- Bootstrap início -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+
+	<style type="text/css">
+		
+		/* Configuração padrão da página
+		-------------------------------*/
+		body, html {
+			margin: 0;
+			font: 25px "Lato", sans-serif;
+			color: #777;
+			height: 100%;
+
+		}
+
+		button:hover{
+			background: blue;
+			color: #fff;
+		}
+
+		.teste{
+
+			background-image: url('https://centraloftalmica.com.br/wp-content/uploads/2020/09/16011377875f6f6c7b5b683.jpeg');
+			z-index: 2;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+			height: 100%;
+		}
+
+		.conteudo {
+			color: #777;
+			text-align: justify;
+			padding: 50px 80px;
+			background: rgb(0, 0, 0, 0.8);
+			height: 100%;
+			text-align: center;
+
+		}
+		.formulario{
+
+			margin-top: 100px;
+
+		}
+
+
+		/* Efeito Parallax
+		-------------------------------*/
+		.caixa1, .caixa2{
+			position: relative;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+
+		}
+
+		.caixa1 {
+			background-image: url('https://saude.abril.com.br/wp-content/uploads/2018/06/lente-de-contato.jpg');
+			z-index: 1;
+		}
+
+		.caixa2 {
+			background-image: url('https://media.gazetadopovo.com.br/viver-bem/2019/05/lentes-768x512-5f920280.jpg');
+			z-index: 1;
+		}
+
+		.conteudo-titulo {
+			position: absolute;
+			left: 0;
+			top: 45%;
+			width: 100%;
+			text-align: center;
+		}
+
+		.conteudo-titulo span.titulo {
+			color: #fff;
+			background-color: #111;
+			padding: 18px;
+			font-size: 25px;
+			letter-spacing: 5px;
+			text-transform: uppercase;
+			opacity: 0.7;
+
+		}
+		.container {
+    		max-width: 100%;
+    		margin: 0px;
+    		padding: 0px;
+		}
+
+		hr{
+			background:#777;
+			width: 50%;
+		}
+	</style>
+
+	<script type="text/javascript">
+		
+		function fazertestedevisao(){
+
+			
+
+			let teste_de_grau_esferico_esquerdo = document.getElementById('teste_de_grau_esferico_esquerdo').value;
+
+			let teste_de_cilindrico_esquerdo = document.getElementById('teste_de_cilindrico_esquerdo').value;
+
+			let teste_de_grau_esferico_direito = document.getElementById('teste_de_grau_esferico_direito').value;
+
+			let teste_de_cilindrico_direito = document.getElementById('teste_de_cilindrico_direito').value;
+
+			$('#modalRegistraDespesa').modal('show')
+			document.getElementById('modal_titulo').innerHTML = 'concorda que essas são as características corretas?'
+
+			document.getElementById('modal_titulo_div').className = 'modal-header text-info'
+
+			document.getElementById('modal_conteudo').innerHTML = 
+				'grau esferico do olho Esquerdo: ' + teste_de_grau_esferico_esquerdo + '<br>'+
+				'cilíndrico do olho Esquerdo: ' + teste_de_cilindrico_esquerdo + '<br>'+
+				'grau esferico do olho direito: ' + teste_de_grau_esferico_direito + '<br>'+
+				'cilíndrico do olho direito: ' + teste_de_cilindrico_direito 
+			document.getElementById('modal_btn').innerHTML = 'Voltar e corrigir'
+			document.getElementById('modal_btn').className = 'btn btn-danger'}
+
+
+		function teste22(){
+
+			let teste_de_grau_esferico_esquerdo = document.getElementById('teste_de_grau_esferico_esquerdo').value;
+
+			let teste_de_cilindrico_esquerdo = document.getElementById('teste_de_cilindrico_esquerdo').value;
+
+			let teste_de_grau_esferico_direito = document.getElementById('teste_de_grau_esferico_direito').value;
+
+			let teste_de_cilindrico_direito = document.getElementById('teste_de_cilindrico_direito').value;
+
+
+			if(teste_de_grau_esferico_esquerdo <=-3 
+				&& 
+				teste_de_grau_esferico_esquerdo >=-12
+				||
+				teste_de_grau_esferico_direito <=-3
+				&&
+				teste_de_grau_esferico_direito >=-12)
+				{
+
+					if ( teste_de_cilindrico_esquerdo == 0 &&teste_de_cilindrico_direito == 0) 
+						{
+							
+							$('#modalRegistraDespesa2').modal('show')
+							document.getElementById('modal_titulo2').innerHTML = 'Concussão do Teste'
+							document.getElementById('modal_titulo_div2').className = 'modal-header text-info'
+							document.getElementById('modal_conteudo2').innerHTML = ' A escolha correta seria a lente Prime'
+
+
+						}else if( teste_de_cilindrico_esquerdo >= -2 &&   		  teste_de_cilindrico_direito >= -2 
+								  && 
+								  teste_de_grau_esferico_esquerdo >=-10 
+								  &&
+								  teste_de_grau_esferico_direito >= -10)
+						{
+								
+								$('#modalRegistraDespesa2').modal('show')
+							document.getElementById('modal_titulo2').innerHTML = 'Concussão do Teste'
+							document.getElementById('modal_titulo_div2').className = 'modal-header text-info'
+							document.getElementById('modal_conteudo2').innerHTML = ' A escolha correta seria a lente Prime'
+							}else{
+								$('#modalRegistraDespesa2').modal('show')
+						document.getElementById('modal_titulo2').innerHTML = 'Concussão do Teste'
+						document.getElementById('modal_titulo_div2').className = 'modal-header text-info'
+						document.getElementById('modal_conteudo2').innerHTML = ' A escolha correta seria a lente Vision'
+
+							}
+
+				}else if(
+					teste_de_grau_esferico_esquerdo >=-15
+					&&
+					teste_de_grau_esferico_direito >=-15
+					&&
+					teste_de_cilindrico_esquerdo >=-5
+					&&
+					teste_de_cilindrico_direito >=-5)
+				{ 
+
+					$('#modalRegistraDespesa2').modal('show')
+						document.getElementById('modal_titulo2').innerHTML = 'Concussão do Teste'
+						document.getElementById('modal_titulo_div2').className = 'modal-header text-info'
+						document.getElementById('modal_conteudo2').innerHTML = ' A escolha correta seria a lente Vision'
+				}else if (teste_de_cilindrico_esquerdo <= -5 || teste_de_cilindrico_direito <= -5 ) 	{ 
+							$('#modalRegistraDespesa2').modal('show')
+							document.getElementById('modal_titulo2').innerHTML = 'Concussão do Teste'
+							document.getElementById('modal_titulo_div2').className = 'modal-header text-info'
+							document.getElementById('modal_conteudo2').innerHTML = ' Desculpe não temos lente para esse modelo'
+						 }
+
+		}
+
+
+
+	</script>
+
+</head>
+<body class="container">
+
+	<div class="caixa1">
+		<div class="conteudo-titulo">
+			<span class="titulo">Teste para escolher sua lente</span>
+		</div>
+	</div>
+	<div class="teste">
+	<div class="conteudo">
+		<form class="formulario">
+		<fieldset> 
+			<legend> Teste necessário para escolher sua lente </legend><br>
+			Escolha o grau esferico do olho Esquerdo<br>
+			<select id="teste_de_grau_esferico_esquerdo">
+				
+				<option> 0 </option>
+				<option> -0.25 </option>
+				<option> -0.50 </option>
+				<option> -0.75 </option>
+				<option> -1 </option>
+				<option> -1.25 </option>
+				<option> -1.50 </option>
+				<option> -1.75 </option>
+				<option> -2 </option>
+				<option> -2.25 </option>
+				<option> -2.50 </option>
+				<option> -2.75 </option>
+				<option> -3 </option>
+				<option> -3.25 </option>
+				<option> -3.50 </option>
+				<option> -3.75 </option>
+				<option> -4 </option>
+				<option> -4.25 </option>
+				<option> -4.50 </option>
+				<option> -4.75 </option>
+				<option> -5 </option>
+				<option> -5.25 </option>
+				<option> -5.50 </option>
+				<option> -5.75 </option>
+				<option> -6 </option>
+				<option> -7.25 </option>
+				<option> -7.50 </option>
+				<option> -7.75 </option>
+				<option> -8 </option>
+				<option> -8.25 </option>
+				<option> -8.50 </option>
+				<option> -8.75 </option>
+				<option> -9 </option>
+				<option> -9.25 </option>
+				<option> -9.50 </option>
+				<option> -9.75 </option>
+				<option> -10 </option>
+				<option> -10.25 </option>
+				<option> -10.50 </option>
+				<option> -10.75 </option>
+				<option> -11 </option>
+				<option> -11.25 </option>
+				<option> -11.50 </option>
+				<option> -11.75 </option>
+				<option> -12 </option>
+				<option> -12.25 </option>
+				<option> -12.50 </option>
+				<option> -12.75 </option>
+				<option> -13 </option>
+				<option> -13.25 </option>
+				<option> -13.50 </option>
+				<option> -13.75 </option>
+				<option> -14 </option>
+				<option> -14.25 </option>
+				<option> -14.50 </option>
+				<option> -14.75 </option>
+				<option> -15 </option>
+			</select><br><br>
+
+			Escolha o cilíndrico do olho Esquerdo <br>
+			<select id="teste_de_cilindrico_esquerdo">
+				<option> 0 </option>
+				<option> -0.25 </option>
+				<option> -0.50 </option>
+				<option> -0.75 </option>
+				<option> -1 </option>
+				<option> -1.25 </option>
+				<option> -1.50 </option>
+				<option> -1.75 </option>
+				<option> -2 </option>
+				<option> -2.25 </option>
+				<option> -2.50 </option>
+				<option> -2.75 </option>
+				<option> -3 </option>
+				<option> -3.25 </option>
+				<option> -3.50 </option>
+				<option> -3.75 </option>
+				<option> -4 </option>
+				<option> -4.25 </option>
+				<option> -4.50 </option>
+				<option> -4.75 </option>
+				<option> -5 </option>
+				<option> -5.25 </option>
+				<option> -5.50 </option>
+				<option> -5.75 </option>
+				<option> -6 </option>
+			</select><br><br>
+
+
+			<hr><br>
+
+			Escolha o grau esferico do olho direito <br>
+			<select id="teste_de_grau_esferico_direito">
+				
+				<option> 0 </option>
+				<option> -0.25 </option>
+				<option> -0.50 </option>
+				<option> -0.75 </option>
+				<option> -1 </option>
+				<option> -1.25 </option>
+				<option> -1.50 </option>
+				<option> -1.75 </option>
+				<option> -2 </option>
+				<option> -2.25 </option>
+				<option> -2.50 </option>
+				<option> -2.75 </option>
+				<option> -3 </option>
+				<option> -3.25 </option>
+				<option> -3.50 </option>
+				<option> -3.75 </option>
+				<option> -4 </option>
+				<option> -4.25 </option>
+				<option> -4.50 </option>
+				<option> -4.75 </option>
+				<option> -5 </option>
+				<option> -5.25 </option>
+				<option> -5.50 </option>
+				<option> -5.75 </option>
+				<option> -6 </option>
+				<option> -7.25 </option>
+				<option> -7.50 </option>
+				<option> -7.75 </option>
+				<option> -8 </option>
+				<option> -8.25 </option>
+				<option> -8.50 </option>
+				<option> -8.75 </option>
+				<option> -9 </option>
+				<option> -9.25 </option>
+				<option> -9.50 </option>
+				<option> -9.75 </option>
+				<option> -10 </option>
+				<option> -10.25 </option>
+				<option> -10.50 </option>
+				<option> -10.75 </option>
+				<option> -11 </option>
+				<option> -11.25 </option>
+				<option> -11.50 </option>
+				<option> -11.75 </option>
+				<option> -12 </option>
+				<option> -12.25 </option>
+				<option> -12.50 </option>
+				<option> -12.75 </option>
+				<option> -13 </option>
+				<option> -13.25 </option>
+				<option> -13.50 </option>
+				<option> -13.75 </option>
+				<option> -14 </option>
+				<option> -14.25 </option>
+				<option> -14.50 </option>
+				<option> -14.75 </option>
+				<option> -15 </option>
+			</select><br><br>
+
+			Escolha o cilíndrico do olho direito <br>
+			<select id="teste_de_cilindrico_direito">
+				<option> 0 </option>
+				<option> -0.25 </option>
+				<option> -0.50 </option>
+				<option> -0.75 </option>
+				<option> -1 </option>
+				<option> -1.25 </option>
+				<option> -1.50 </option>
+				<option> -1.75 </option>
+				<option> -2 </option>
+				<option> -2.25 </option>
+				<option> -2.50 </option>
+				<option> -2.75 </option>
+				<option> -3 </option>
+				<option> -3.25 </option>
+				<option> -3.50 </option>
+				<option> -3.75 </option>
+				<option> -4 </option>
+				<option> -4.25 </option>
+				<option> -4.50 </option>
+				<option> -4.75 </option>
+				<option> -5 </option>
+				<option> -5.25 </option>
+				<option> -5.50 </option>
+				<option> -5.75 </option>
+				<option> -6 </option>
+			</select><br><br>
+
+		<!-- Button trigger modal -->
+			<button type="button" class="btn" onclick="fazertestedevisao()">
+				Fazer o Teste
+          </button>
+
+	</form>
+	</div>
+	</div>
+
+	<div class="caixa2">
+		<div class="conteudo-titulo">
+			<span class="titulo">Teste rápido e Fácil</span>
+		</div>
+	</div>
+
+			<!-- Modal -->
+    <div class="modal fade" id="modalRegistraDespesa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div id="modal_titulo_div">
+            <h5 class="modal-title" id="modal_titulo"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal_conteudo"></div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" id="modal_btn">Voltar</button>
+            <button type="button" data-dismiss="modal" class="btn btn-primary" id="modal_btn2" onclick="teste22()">Continuar o Teste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalRegistraDespesa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div id="modal_titulo_div2">
+            <h5 class="modal-title" id="modal_titulo2"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal_conteudo2"></div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-primary" id="modal_btn2" onclick="teste22()">concluir o Teste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
